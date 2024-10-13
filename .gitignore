@@ -1,0 +1,52 @@
+# 编译后的二进制文件
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# 测试二进制文件
+*.test
+
+# 输出的性能分析文件
+*.prof
+
+# Go工作空间文件
+go.work
+
+# 依赖目录
+/vendor/
+
+# 输出目录
+/bin/
+/dist/
+
+# IDE和编辑器文件
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db
+
+# 日志文件
+*.log
+
+# 环境变量文件
+.env
+
+# Gin框架生成的临时文件
+gin-bin
+
+# 其他临时文件
+tmp/
+temp/
+
+# 配置文件（如果需要忽略）
+# config.yaml
+
+# 缓存文件
+.cache/

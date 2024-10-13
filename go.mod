@@ -1,4 +1,4 @@
-module github.com/yourusername/luck-go
+module github.com/chenLe1232/luck-go
 
 go 1.23.2
 
