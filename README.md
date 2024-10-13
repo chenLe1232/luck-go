@@ -41,9 +41,9 @@ luck-go
   ```
   curl http://localhost:7001/hello 
   ```
-- http://localhost:7001/api/wallpaper (POST)
+- http://localhost:7001/api/wallpaper 
   ```
-  curl -X POST "http://localhost:7001/api/wallpaper?category=machine&pageSize=10&pageStart=1"
+  curl http://localhost:7001/api/wallpaper?category=machine&pageSize=10&pageStart=1
   ```
 
 ## 如何运行

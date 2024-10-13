@@ -6,8 +6,9 @@ After=network.target
 # 项目在服务器 /home/go/luck-go
 ExecStart=/home/go/luck-go/build/main
 WorkingDirectory=/home/go/luck-go
-User=go
+User=root
 Restart=always
+Environment=GIN_MODE=release
 
 [Install]
 WantedBy=multi-user.target

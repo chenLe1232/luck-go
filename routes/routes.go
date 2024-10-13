@@ -8,13 +8,14 @@ import (
 )
 
 func SetupRoutes(r *gin.Engine) {
-	// 现有的路由
+	// API 路由组
 	api := r.Group("/api")
 	{
-		api.POST("/wallpaper", handlers.GetWallpaper)
+		// 将 POST 改为 GET
+		api.GET("/wallpaper", handlers.GetWallpaper)
 	}
 
-	// 增加两个新路由
+	// 保留现有的其他路由
 	r.GET("/ping", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"message": "pong",
