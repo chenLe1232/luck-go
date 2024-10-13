@@ -3,8 +3,8 @@ tmp_dir = "tmp"
 
 [build]
   cmd = "go build -o ./tmp/main.exe ./cmd/main.go"
-  # 如果你是mac 使用bin 即可
-  # bin = "./tmp/main.exe"
+  # 如果你是mac 使用bin 即可 注释掉full_bin
+  # bin = "./tmp/main"
 
   # windows11 使用full_bin 会报错 详情看 issue https://github.com/air-verse/air/issues/659
   full_bin = "D:\\code-work\\carline-go\\luck-go\\tmp\\main.exe"
@@ -21,7 +21,7 @@ tmp_dir = "tmp"
 
 [log]
   time = true
-  level = "debug"
+  level = "info"
 
 [misc]
   clean_on_exit = false

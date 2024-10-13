@@ -31,11 +31,44 @@ luck-go
 └── vendor             # 第三方库代码
 ```
 
+## 可用路由
+
+- http://localhost:7001/ping
+  - curl http://localhost:7001/ping
+- http://localhost:7001/hello
+  - curl http://localhost:7001/hello
+- http://localhost:7001/api/wallpaper (POST)
+  - curl -X POST "http://localhost:7001/api/wallpaper?category=machine&pageSize=10&pageStart=1"
+
 ## 如何运行
 
 1. 确保已安装 Go 1.16 或更高版本。
 2. 克隆此仓库。
 3. 在项目根目录运行 `go mod tidy` 安装依赖。
+4. 运行以下命令启动服务器：
+   ```
+   go run cmd/main.go
+   ```
+5. 服务器将在 `http://localhost:7001` 上运行。
+
+## 测试路由
+
+您可以使用以下方法测试新添加的路由：
+
+1. 使用浏览器访问：
+   - http://localhost:7001/ping
+   - http://localhost:7001/hello
+
+2. 使用 curl 命令：
+   ```
+   curl http://localhost:7001/ping
+   curl http://localhost:7001/hello
+   ```
+
+3. 对于 `/api/wallpaper` 路由，您可以使用 POST 请求：
+   ```
+   curl -X POST "http://localhost:7001/api/wallpaper?category=nature&pageSize=10&pageStart=1"
+   ```
 4. 安装 Air 用于热重载（可选）：
    ```
    go install github.com/air-verse/air@latest
@@ -49,40 +82,17 @@ luck-go
      ```
      air
      ```
-6. 服务器将在 `http://localhost:8080` 上运行。
-
-## 本地请求测试
-
-您可以使用以下方法测试本地服务：
-
-### 使用浏览器（仅适用于 GET 请求）
-
-直接在浏览器地址栏输入：
-- http://localhost:8080/ping
-- http://localhost:8080/hello
-
-### 使用 curl 命令
-
-1. GET 请求:
-   ```
-   curl http://localhost:8080/ping
-   curl http://localhost:8080/hello
-   ```
-
-2. POST 请求:
-   ```
-   curl -X POST -H "Content-Type: application/json" -d '{"message":"测试消息"}' http://localhost:8080/echo
-   ```
-
-### 使用 Postman 或其他 API 测试工具
-
-1. 打开 Postman
-2. 创建新请求
-3. 输入 URL（例如：http://localhost:8080/ping）
-4. 选择适当的 HTTP 方法（GET 或 POST）
-5. 对于 POST 请求，在 Body 选项卡中选择 raw 和 JSON，然后输入数据
-6. 点击 Send 发送请求
-
+> [!WARNING]
+> ### 环境差异
+> - **macOS**: 在 `.air.toml` 中使用 `bin` 配置：
+>   ```toml
+>   bin = "./tmp/main.exe"
+>   ```
+> - **Windows 11**: 使用 `full_bin` 配置可能会报错，详情请查看 [issue #659](https://github.com/air-verse/air/issues/659)：
+>   ```toml
+>   full_bin = "D:\\code-work\\carline-go\\luck-go\\tmp\\main.exe"
+>   ```
+6. 服务器将在 `http://localhost:7001` 上运行。
 ## 配置
 
 配置文件位于 `config/config.yaml`。请根据您的环境修改相应的配置。
