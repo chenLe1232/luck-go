@@ -39,7 +39,7 @@ luck-go
   ``` 
 - http://localhost:7001/hello
   ```
-  curl http://localhost:7001/hello
+  curl http://localhost:7001/hello 
   ```
 - http://localhost:7001/api/wallpaper (POST)
   ```
