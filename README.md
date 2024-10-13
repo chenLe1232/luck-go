@@ -34,11 +34,17 @@ luck-go
 ## 可用路由
 
 - http://localhost:7001/ping
-  - curl http://localhost:7001/ping
+  ```
+  curl http://localhost:7001/ping
+  ``` 
 - http://localhost:7001/hello
-  - curl http://localhost:7001/hello
+  ```
+  curl http://localhost:7001/hello
+  ```
 - http://localhost:7001/api/wallpaper (POST)
-  - curl -X POST "http://localhost:7001/api/wallpaper?category=machine&pageSize=10&pageStart=1"
+  ```
+  curl -X POST "http://localhost:7001/api/wallpaper?category=machine&pageSize=10&pageStart=1"
+  ```
 
 ## 如何运行
 
