@@ -13,18 +13,18 @@ func SetupRoutes(r *gin.Engine) {
 	{
 		// 将 POST 改为 GET
 		api.GET("/wallpaper", handlers.GetWallpaper)
+
+		// 将这些路由移到 api 组内
+		api.GET("/ping", func(c *gin.Context) {
+			c.JSON(http.StatusOK, gin.H{
+				"message": "pong",
+			})
+		})
+
+		api.GET("/hello", func(c *gin.Context) {
+			c.JSON(http.StatusOK, gin.H{
+				"message": "Hello, World!",
+			})
+		})
 	}
-
-	// 保留现有的其他路由
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "pong",
-		})
-	})
-
-	r.GET("/hello", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "Hello, World!",
-		})
-	})
 }

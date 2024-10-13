@@ -12,6 +12,8 @@
 
    # 重新加载 systemd
    sudo systemctl daemon-reload
+   # 停止服务
+    #  sudo systemctl stop job.service
 
    # 重启服务
    sudo systemctl restart job.service

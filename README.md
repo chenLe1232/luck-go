@@ -35,11 +35,11 @@ luck-go
 
 - http://localhost:7001/ping
   ```
-  curl http://localhost:7001/ping
+  curl http://localhost:7001/api/ping
   ``` 
 - http://localhost:7001/hello
   ```
-  curl http://localhost:7001/hello 
+  curl http://localhost:7001/api/hello 
   ```
 - http://localhost:7001/api/wallpaper 
   ```
