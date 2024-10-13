@@ -36,11 +36,20 @@ luck-go
 1. 确保已安装 Go 1.16 或更高版本。
 2. 克隆此仓库。
 3. 在项目根目录运行 `go mod tidy` 安装依赖。
-4. 运行以下命令启动服务器：
+4. 安装 Air 用于热重载（可选）：
    ```
-   go run cmd/main.go
+   go install github.com/air-verse/air@latest
    ```
-5. 服务器将在 `http://localhost:8080` 上运行。
+5. 运行以下命令启动服务器：
+   - 不使用 Air：
+     ```
+     go run cmd/main.go
+     ```
+   - 使用 Air（如果已安装）：
+     ```
+     air
+     ```
+6. 服务器将在 `http://localhost:8080` 上运行。
 
 ## 本地请求测试
 

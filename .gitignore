@@ -23,7 +23,6 @@ go.work
 
 # IDE和编辑器文件
 .idea/
-.vscode/
 *.swp
 *.swo
 *~
