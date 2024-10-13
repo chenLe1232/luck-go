@@ -8,7 +8,7 @@
    #go build -o tmp/main ./cmd/main.go
 
    # 复制服务文件
-   sudo cp -n job.service /etc/systemd/system/ || echo "服务文件已存在，跳过复制"
+   sudo cp  job.service /etc/systemd/system/ 
 
    # 重新加载 systemd
    sudo systemctl daemon-reload
