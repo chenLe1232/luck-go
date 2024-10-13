@@ -2,10 +2,10 @@
    set -e
 
    # 更新代码
-   git pull
+   #git pull
 
    # 编译项目 机器上有go环境 机器是linux 不需要编译成exe
-   go build -o tmp/main ./cmd/main.go
+   #go build -o tmp/main ./cmd/main.go
 
    # 复制服务文件
    sudo cp -n job.service /etc/systemd/system/ || echo "服务文件已存在，跳过复制"
