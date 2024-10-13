@@ -1,5 +1,5 @@
 [Unit]
-Description=carline-go
+Description=Job Service for Carline Go Application
 After=network.target
 
 [Service]

@@ -14,10 +14,10 @@
    sudo systemctl daemon-reload
 
    # 重启服务
-   sudo systemctl restart carline-go
+   sudo systemctl restart job.service
 
    # 确保服务已启用
-   sudo systemctl enable carline-go
+   sudo systemctl enable job.service
 
    # 给deploy.sh执行权限
    # chmod +x deploy.sh
