@@ -26,5 +26,13 @@ func SetupRoutes(r *gin.Engine) {
 				"message": "Hello, World!",
 			})
 		})
+
+		// Add a new route for the data service API endpoint
+		api.GET("/data", handlers.GetData)
+		api.POST("/data", func(c *gin.Context) {
+			c.JSON(http.StatusOK, gin.H{
+				"message": "hello world",
+			})
+		})
 	}
 }
