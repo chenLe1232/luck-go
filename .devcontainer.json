@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "build": "go mod tidy && go build -o main cmd/main.go",
+    "launch": "go run cmd/main.go"
+  }
+}
