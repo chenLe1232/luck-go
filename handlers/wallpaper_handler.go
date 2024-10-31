@@ -2,9 +2,10 @@ package handlers
 
 import (
 	"log"
-	"luck-go/dtos/wallpaper"
-	wallpaperService "luck-go/services/wallpaper"
 	"net/http"
+
+	"github.com/chenLe1232/luck-go/dtos/wallpaper"
+	wallpaperService "github.com/chenLe1232/luck-go/services/wallpaper"
 
 	"github.com/gin-gonic/gin"
 )

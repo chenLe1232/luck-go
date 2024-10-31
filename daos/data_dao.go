@@ -1,7 +1,7 @@
-package dataDao
+package data_dao
 
 import (
-	"luck-go/database/models"
+	"github.com/chenLe1232/luck-go/database/models"
 )
 
 func GetData() ([]models.Data, error) {

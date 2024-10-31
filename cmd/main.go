@@ -2,7 +2,8 @@ package main
 
 import (
 	"log"
-	"luck-go/routes"
+
+	"github.com/chenLe1232/luck-go/routes"
 
 	"github.com/gin-gonic/gin"
 )

@@ -1,8 +1,9 @@
 package routes
 
 import (
-	handlers "luck-go/handlers"
 	"net/http"
+
+	handlers "github.com/chenLe1232/luck-go/handlers"
 
 	"github.com/gin-gonic/gin"
 )
