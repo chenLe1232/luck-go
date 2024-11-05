@@ -1,0 +1,15 @@
+{
+    "ignore": [
+        "node_modules",
+        "vendor",
+        "gorm.io"
+    ],
+    "words": [
+        "gorm",
+        "sqldb",
+        "varchar",
+        "primarykey",
+        "autoincrement",
+        "datetime"
+    ]
+}
