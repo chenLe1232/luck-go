@@ -1,13 +1,13 @@
 server:
   port: 7001
-  mode: debug
+  mode: release
 
 database:
   driver: mysql
   host: rm-bp1riq19yolb58kecho.mysql.rds.aliyuncs.com
   port: 3306
   username: carline
-  password: xxxx
+  password: 
   dbname: test_cn
 # redis:
 #   host: localhost

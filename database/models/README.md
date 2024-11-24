@@ -33,6 +33,7 @@ func CreateUsersTable(db *gorm.DB) error {
 ```
 
 3. 在 `daos/users` 实现用户 DAO：
+   > DAO 的实现是用来操作数据库的，比如创建用户，查询用户，更新用户，删除用户等
 
 ```go:daos/users/user_dao.go
 package user_dao
@@ -147,7 +148,7 @@ import (
 
 func main() {
     // 数据库连接配置
-    dsn := "carline:Carline9527@tcp(rm-bp1riq19yolb58kecho.mysql.rds.aliyuncs.com:3306)/test_cn?charset=utf8mb4&parseTime=True&loc=Local"
+    dsn := "carline:@tcp(rm-.mysql.rds.aliyuncs.com:3306)/test_cn?charset=utf8mb4&parseTime=True&loc=Local"
     db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
     if err != nil {
         log.Fatalf("数据库连接失败: %v", err)

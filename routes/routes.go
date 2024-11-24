@@ -16,6 +16,8 @@ func SetupRoutes(r *gin.Engine, db *gorm.DB) {
 
 	// 初始化 Handler
 	userHandler := handlers.NewUserHandler(userDAO)
+	//! 初始化 smartAiHandler
+	smartAiHandler := handlers.NewSmartAiHandler(db)
 
 	// API 路由组
 	api := r.Group("/api")
@@ -47,5 +49,8 @@ func SetupRoutes(r *gin.Engine, db *gorm.DB) {
 		// 用户相关路由
 		api.POST("/users", userHandler.CreateUser)
 		api.GET("/users/email", userHandler.FindByEmail)
+		//！ 智能 AI 相关路由
+		api.GET("/smartAi/queryAnswerByCommitID", smartAiHandler.QueryAnswerByCommitID)
+		api.POST("/smartAi/queryAnswerByQuestion", smartAiHandler.QueryAnswerByQuestion)
 	}
 }

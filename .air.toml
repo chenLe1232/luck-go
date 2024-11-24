@@ -6,7 +6,8 @@ tmp_dir = "tmp"
 cmd = "go build -o ./tmp/main ./cmd/main.go"
 # 如果你是mac 使用bin 即可 注释掉full_bin
 bin = "./tmp/main"
-
+env_files = ["./config/config.yaml"]
+env = ["AUTO_MIGRATE=true"]
 # windows11 使用full_bin 会报错 详情看 issue https://github.com/air-verse/air/issues/659
 # full_bin = "D:\\code-work\\carline-go\\luck-go\\tmp\\main.exe"
 log = "air_errors.log"
